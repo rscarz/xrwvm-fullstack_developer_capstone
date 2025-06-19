@@ -58,7 +58,7 @@ img{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex:1
+  flex:1;
 }
 
 .form_panel {
@@ -123,4 +123,103 @@ img{
     border-radius:50px;
     text-align:center;
     box-shadow: 2px 2px 3px #999;  
+}
+
+.page-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+.main-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+}
+.car-banner {
+    text-align: center;
+    padding: 20px;
+}
+
+.car-banner img {
+    max-height: 300px;
+    width: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.contact-container {
+    padding: 30px;
+}
+
+.contact-row {
+    margin: 0;
+}
+
+.contact-icon {
+    background: linear-gradient(135deg, #00CED1, #00a8cc);
+    border-radius: 15px;
+    padding: 40px 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contact-icon img {
+    max-width: 150px;
+    margin-bottom: 25px;
+}
+
+.contact-icon h3 {
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contact-item {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background: #f8f9fa;
+    transition: all 0.3s;
+    border-left: 4px solid #00CED1;
+}
+
+.contact-item:hover {
+    background: #e3f7f8;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 206, 209, 0.2);
+}
+
+.contact-item h5 {
+    color: #00a8cc;
+    font-weight: 700;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-item h5 i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+
+.contact-item p {
+    font-size: 1.1rem;
+    margin: 0;
+    padding-left: 28px;
+    color: #333;
 }

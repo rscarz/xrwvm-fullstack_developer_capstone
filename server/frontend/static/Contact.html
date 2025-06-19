@@ -2,6 +2,107 @@
 <head>
     <link rel="stylesheet" href="/static/style.css">
     <link rel="stylesheet" href="/static/bootstrap.min.css">
+
+    <style>
+        .page-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .main-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            margin-bottom: 40px;
+        }
+        .car-banner {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .car-banner img {
+            max-height: 300px;
+            width: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .contact-container {
+            padding: 30px;
+        }
+        
+        .contact-row {
+            margin: 0;
+        }
+        
+        .contact-icon {
+            background: linear-gradient(135deg, #00CED1, #00a8cc);
+            border-radius: 15px;
+            padding: 40px 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .contact-icon img {
+            max-width: 150px;
+            margin-bottom: 25px;
+        }
+        
+        .contact-icon h3 {
+            color: white;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        .contact-info {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            height: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .contact-item {
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            background: #f8f9fa;
+            transition: all 0.3s;
+            border-left: 4px solid #00CED1;
+        }
+        
+        .contact-item:hover {
+            background: #e3f7f8;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 206, 209, 0.2);
+        }
+        
+        .contact-item h5 {
+            color: #00a8cc;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-item h5 i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .contact-item p {
+            font-size: 1.1rem;
+            margin: 0;
+            padding-left: 28px;
+            color: #333;
+        }
+    </style>    
 </head>
 <div>
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color:darkturquoise; height: 1in;">
@@ -25,38 +126,43 @@
       </div>
     </div>
   </nav>
-  
-    <div class="card" style="width: 80%;margin: auto; margin-top:5%;">
-        <div class="banner" name="about-header">
-            <h1>Contact Us</h1>
-          </div>    
-        <div class="banner" name="about-header" style="width: 60%;margin: auto; margin-top:1%">
-            <img src="/static/cars.jpeg" class="card-img-top" alt="...">
-        </div>
 
-        <div class="row">
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body" style="width: 44%;margin: auto; margin-top:1%">
-                    <img src="/static/contactus.png" class="card-img-top" alt="...">
+  <div class="page-container">
+    <div class="main-card">
+        <div class="car-banner">
+            <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?auto=format&fit=crop&w=900&q=80" alt="Nuestra flota de vehículos">
+        </div>
+        
+        <div class="contact-container">
+            <div class="row contact-row">
+                <div class="col-md-5 mb-4 mb-md-0">
+                    <div class="contact-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3062/3062635.png" alt="Icono de contacto">
+                        <h3>Información de Contacto</h3>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">Número de contacto</h5>
-                  <p class="card-text">+59598898468414</p>
-                  <h5 class="card-title">Correo electrónico de contacto</h5>
-                  <p class="card-text">delearships@correo.com</p>
-                  <h5 class="card-title">Fax</h5>
-                  <p class="card-text">79879879879798</p>
+                
+                <div class="col-md-7">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <h5><i class="fas fa-phone"></i> Número de contacto</h5>
+                            <p>+595 988 98468414</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h5><i class="fas fa-envelope"></i> Correo electrónico de contacto</h5>
+                            <p>delearships@correo.com</p>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <h5><i class="fas fa-fax"></i> Fax</h5>
+                            <p>79879879879798</p>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-    </div>
-    
+        </div>
+  </div>  
 </div>
 
 </html>
