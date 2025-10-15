@@ -15,9 +15,10 @@ from django.core.validators import MaxValueValidator, MinValueValidator
 class CarMake(models.Model):
     name = models.CharField(max_length=100)
     description = models.TextField()
+    # Other fields as needed
 
     def __str__(self):
-        return self.name
+        return self.name  # Return the name as the string representation
 
 # <HINT> Create a Car Model model `class CarModel(models.Model):`:
 # - Many-To-One relationship to Car Make model (One Car Make has many
@@ -29,33 +30,23 @@ class CarMake(models.Model):
 # - Any other fields you would like to include in car model
 # - __str__ method to print a car make object
 class CarModel(models.Model):
-    # Relación con CarMake
-    make = models.ForeignKey(CarMake, on_delete=models.CASCADE, related_name='car_models')
-
-    # Dealer ID del concesionario (relacionado a Cloudant)
-    dealer_id = models.IntegerField()
-
-    # Nombre del modelo del auto
+    car_make = models.ForeignKey(CarMake, on_delete=models.CASCADE, related_name='models')
+    dealer_id = models.IntegerField(default=1)
     name = models.CharField(max_length=100)
-
-    # Tipos de autos válidos
+    mileage = models.IntegerField(default=0)
     CAR_TYPES = [
         ('SEDAN', 'Sedan'),
         ('SUV', 'SUV'),
         ('WAGON', 'Wagon'),
-        ('HATCHBACK', 'Hatchback'),
-        ('COUPE', 'Coupe'),
-        ('MINIVAN', 'Minivan'),
-        ('PICKUP', 'Pickup'),
-        ('CONVERTIBLE', 'Convertible')
+        # Add more choices as required
     ]
-    car_type = models.CharField(max_length=11, choices=CAR_TYPES, default='SEDAN')
-
-    # Año como fecha completa
-    year = models.DateField()
-
-    # Cualquier otro campo opcional, por ejemplo: color
-    color = models.CharField(max_length=30, blank=True, null=True)
+    type = models.CharField(max_length=10, choices=CAR_TYPES, default='SUV')
+    year = models.IntegerField(default=2023,
+        validators=[
+            MaxValueValidator(2023),
+            MinValueValidator(2015)
+        ])
+    # Other fields as needed
 
     def __str__(self):
-        return f"{self.make.name} {self.name} ({self.car_type})"
+        return self.name  # Return the name as the string representation
