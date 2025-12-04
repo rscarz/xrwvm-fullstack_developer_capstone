@@ -1,6 +1,6 @@
 [flake8]
 exclude =
-    ./server/frontend/node_modules,
+    ./frontend/node_modules,
     __pycache__,
     */migrations
 max-line-length = 79
