@@ -20,7 +20,8 @@ class CarMake(models.Model):
 
 
 # <HINT> Create a Car Model model `class CarModel(models.Model):`
-# - Many-To-One relationship to Car Make model (One Car Make has many Car Models)
+# - Many-To-One relationship to Car Make model 
+# (One Car Make has many Car Models)
 # - Name, Type, Year, etc.
 class CarModel(models.Model):
     car_make = models.ForeignKey(
