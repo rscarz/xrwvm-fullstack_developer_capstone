@@ -10,7 +10,7 @@ backend_url = os.getenv(
     'backend_url', default="https://rosabenitez-3030.theiadockernext-0-labs-prod-theiak8s-4-tor01.proxy.cognitiveclass.ai")
 sentiment_analyzer_url = os.getenv(
     'sentiment_analyzer_url',
-    default="https://sentianalyzer.22afnj8vruau.us-south.codeengine.appdomain.cloud/")
+    default="https://sentianalyzer.23ikqecyap7r.us-south.codeengine.appdomain.cloud/")
 
 # def get_request(endpoint, **kwargs):
 # Add code for get requests to back end
