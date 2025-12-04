@@ -31,7 +31,7 @@ jobs:
         run: |
           pwd
           # This command finds all Python files recursively and runs flake8 on them
-          find . -name "*.py" -exec flake8 {} +
+          find . -path "./server/frontend/node_modules" -prune -o -name "*.py" -print0 | xargs -0 flake8
           echo "Linted all the python files successfully"
 
   lint_js:  # 👈 mismo nivel que lint_python
