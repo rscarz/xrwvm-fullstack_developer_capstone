@@ -1,14 +1,9 @@
 # Uncomment the required imports before adding the code
 
-# Se eliminaron imports sin uso:
-# - render, HttpResponseRedirect, HttpResponse
-# - get_object_or_404, redirect
-# - messages, datetime
-# - CarMake
 
 from django.http import JsonResponse
 from django.contrib.auth.models import User
-from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth import login, authenticate
 import logging
 import json
 from django.views.decorators.csrf import csrf_exempt
@@ -56,7 +51,7 @@ def register(request):
                     'error': 'El usuario ya está registrado'
                 })
 
-            user = User.objects.create_user(
+            User.objects.create_user(
                 username=username,
                 password=password,
                 email=email,
