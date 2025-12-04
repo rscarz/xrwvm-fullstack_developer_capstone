@@ -1,6 +1,8 @@
 [flake8]
 exclude =
-    ./frontend/node_modules,
+    node_modules,
+    */migrations/*,
+    .git,
     __pycache__,
-    */migrations
+    venv
 max-line-length = 79
