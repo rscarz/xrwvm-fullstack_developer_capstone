@@ -1,0 +1,9 @@
+[flake8]
+exclude =
+    **/node_modules/*,
+    node_modules,
+    */migrations/*,
+    .git,
+    __pycache__,
+    venv
+max-line-length = 79
