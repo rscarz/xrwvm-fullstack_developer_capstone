@@ -16,7 +16,7 @@ backend_url = os.getenv(
 sentiment_analyzer_url = os.getenv(
     'sentiment_analyzer_url',
     default=(
-        "https://sentianalyzer.23ikqecyap7r.us-south."
+        "https://sentianalyzer.23rw3v8i5vzd.us-south."
         "codeengine.appdomain.cloud/"
     )
 )
